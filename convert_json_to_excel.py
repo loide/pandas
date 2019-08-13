@@ -1,6 +1,5 @@
 import json
 import pandas as pd
-from pandas import DataFrame
 
 FILENAME = "ex1.json"
 
@@ -14,7 +13,7 @@ def main():
 	# filter only xpto tag
 	acc = obj['xpto']
 
-	df = DataFrame(acc)
+	df = pd.DataFrame(acc)
 
 	# export to a excel file
 	export_xls = df.to_excel(r"output.xlsx", index=None, header=True)
